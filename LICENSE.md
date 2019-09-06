@@ -1,6 +1,7 @@
 MIT License
 
-Copyright (c) 2019 Autodesk Robotics Lab
+Copyright (c) 2019 Autodesk Research, Autodesk Inc.
+Copyright (c) 2019 Gramazio Kohler Research, ETH Z{\"u}rich
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
