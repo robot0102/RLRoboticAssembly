@@ -17,70 +17,31 @@ or shape of materials in the real world.
 
 ### Setup
 
-1. Create folders and clone repositories.
-
-    1. Clone [rllib](https://github.com/AutodeskRoboticsLab/rllib).
-    2. In the rllib directory, clone [RLRoboticAssembly](https://github.com/AutodeskRoboticsLab/RLRoboticAssembly).
-
-    After following the procedure above, the folder structure will be as follows:
-    ```
-    rllib/
-    |-- .git/
-    |-- setup-rllib-dev.py
-    |-- ...
-    |-- RLRoboticAssembly/
-        |-- .git/
-        |-- setup-rllib-local.py
-        |-- ...
-    ```
-
-
-2. Install external dependencies.
-
-    1. Optionally, create and activate virtual environment `rlenv` (change name as needed)
-    2. Activate the environment.
+1. Clone repositories.
 
     ```
-    $ python -m venv rlenv
-    $ source rlenv/bin/activate
+    $ mkdir rllib
+    $ cd rllib
+    $ git clone https://github.com/AutodeskRoboticsLab/rllib
+    $ mkdir RLRoboticAssembly
+    $ cd RLRoboticAssembly
+    $ git clone https://github.com/AutodeskRoboticsLab/RLRoboticAssembly
     ```
 
-    After following the procedure above, the folder structure will be as follows:
+2. Setup virtual environment.
+
     ```
-    rllib/
-    |-- .git/
-    |-- rlenv/
-    |-- setup-rllib-dev.py
-    |-- ...
-    |-- RLRoboticAssembly/
-        |-- .git/
-        |-- setup-rllib-local.py
-        |-- ...
+    $ python -m venv pyenv
+    $ source pyenv/bin/activate
     ```
 
-    3. Install the following dependencies:
+3. Install requirements.
 
-        - [Ray/Rllib](https://ray.readthedocs.io/en/stable/rllib.html) (version 0.6.3)
-        - [pybullet](https://pypi.org/project/pybullet/)
-        - [tensorflow](https://pypi.org/project/tensorflow/)
-        - [getch](https://pypi.org/project/getch/)
-        - [pygame](https://pypi.org/project/pygame/)
-        - [transforms3d](https://pypi.org/project/transforms3d/)
+    ```
+    $ pip install -r requirements.txt
+    ```
 
-        ```
-        $ pip install ray[rllib]==0.6.3
-        $ pip install pybullet
-        $ pip install tensorflow==1.10.0
-        $ pip install getch
-        $ pip install pygame
-        $ pip install transforms3d
-        ```
-
-3. Apply patches to installation.
-
-    1. Run `setup-rllib-dev.py`.
-    2. Navigate to _RLRoboticAssembly_.
-    3. Run `setup-rllib-local.py`.
+4. Patch rllib.
 
     ```
     $ python setup-rllib-dev.py
@@ -88,16 +49,10 @@ or shape of materials in the real world.
     $ python setup-rllib-local.py
     ```
 
-Notes:
 
 - This project uses [Python 3.6](https://www.python.org/).
-
-- Installation instructions have been tested in MacOS. This repository has also
-  been tested in Ubuntu.
-
-- Note that the above commands may differ based on your system. You may have to
-  call a different alias or specify the version of `python` or `pip` explicitly.
-  For MacOS, try `python3` and `pip3`.
+- Installation instructions have been tested on MacOS.
+- Code has been tested on MacOS, Windows, and Ubuntu.
 
 
 ### Example
@@ -145,7 +100,7 @@ python rollout_robot.py trained_models/example/checkpoint-<iteration>/checkpoint
   the required `urdf` files _must_ be convex for collision detection to work as
   expected. Geometries used for visualization purposes only are unaffected.
 
-![pbtask](_media/pbtask.jpg)
+![pbtask](media/pbtask.jpg)
 
 - The _task_ should consist of a partial joint member assembly, such as the above.
 
@@ -164,7 +119,7 @@ python rollout_robot.py trained_models/example/checkpoint-<iteration>/checkpoint
     </joint>
     ```
 
-![pbtool](_media/pbtool.jpg)
+![pbtool](media/pbtool.jpg)
 
 - The _tool_ should consist of a complete gripper, sensor, and joint member assembly
   such as the above.
@@ -214,7 +169,7 @@ python rollout_robot.py trained_models/example/checkpoint-<iteration>/checkpoint
     </link>
     ```
 
-![pbassm](_media/pbassm.jpg)
+![pbassm](media/pbassm.jpg)
 
 - The _task_ and _tool_ should be positioned in PyBullet such that the _tool_
   is positioned above, nearby, and within reach of the _task_ as shown above.

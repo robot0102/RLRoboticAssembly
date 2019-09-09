@@ -3,5 +3,4 @@ __pycache__/
 *.yaml
 .DS_Store
 .idea/
-_ignore/
-human_demo_data/
+pyenv/
