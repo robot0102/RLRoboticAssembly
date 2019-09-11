@@ -1,6 +1,4 @@
 __pycache__/
 *.pyc
-*.yaml
-.DS_Store
 .idea/
 pyenv/
