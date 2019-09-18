@@ -8,10 +8,10 @@ Kohler Research, ETH Z{\"u}rich. Real-world tasks were conducted at the Robotic
 Fabrication Laboratory of ETH Z{\"u}rich \cite{rfl}. The following researchers
 developed this codebase:
 
-- [Rodger Luo](https://github.com/RodgerLuo)
 - [Hui Li](https://github.com/huixli)
-- [Nick Cote](https://github.com/revenantspatium)
+- [Rodger Luo](https://github.com/RodgerLuo)
 - [Matteo Pacher](https://github.com/matteo-pacher)
+- [Nick Cote](https://github.com/revenantspatium)
 - [Aleksandra Anna Apolinarska](https://github.com/funkchaser)
 - [Rafael Pastrana](https://github.com/arpastrana)
 
