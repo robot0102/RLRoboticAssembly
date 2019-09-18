@@ -18,8 +18,6 @@ these policies can be deployed successfully in reality. We also show that these 
 generalize to a fair range of inaccuracy and variation of pose or shape of materials in
 the real world.
 
-![pbtask](docs/images/singlelap.gif)
-
 
 ### Setup
 
@@ -100,3 +98,5 @@ the real world.
 
 
 #
+
+![pbtask](docs/images/singlelap.gif)
