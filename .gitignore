@@ -1,4 +1,7 @@
 __pycache__/
 *.pyc
+*.yaml
+.DS_Store
 .idea/
-pyenv/
+_ignore/
+human_demo_data/

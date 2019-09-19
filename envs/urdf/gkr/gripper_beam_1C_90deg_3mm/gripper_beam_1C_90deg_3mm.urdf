@@ -1,0 +1,144 @@
+<?xml version="1.0" ?>
+<robot name="gripper_beam_1C_90deg_3mm">
+    <link name="gripper_beam_1C_90deg_3mm">
+        <inertial>
+            <origin rpy="0 0 0" xyz="-8.173542509136381e-19 4.919694157880184e-18 -0.12804086440536944"/>
+            <mass value="4.310275841129159"/>
+            <inertia ixx="0.0009413956070068256" ixy="7.905640841040137e-22" ixz="-4.517509052022935e-22" iyy="5.320772089153263e-05" iyz="-8.608675500661352e-21" izz="0.0008984210008906098"/>
+        </inertial>
+        <visual>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/visual/gripper_beam_1C_90deg_3mm.stl"/>
+            </geometry>
+            <material name="gripper_beam_1C_90deg_3mm"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_0.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_1.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_10.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_11.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_12.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_13.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_14.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_15.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_16.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_17.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_18.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_19.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_2.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_20.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_21.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_22.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_23.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_24.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_3.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_4.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_5.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_6.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_7.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_8.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_beam_1C_90deg_3mm/meshes/collision/gripper_beam_1C_90deg_3mm_9.stl"/>
+            </geometry>
+        </collision>
+    </link>
+    <material name="gripper_beam_1C_90deg_3mm">
+        <color rgba="0.72 0.60 0.30 0.75"/>
+    </material>
+</robot>

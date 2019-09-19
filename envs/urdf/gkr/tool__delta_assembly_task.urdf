@@ -1,0 +1,231 @@
+<?xml version="1.0" ?>
+<robot name="tool__delta_assembly_task">
+
+    <!-- Import Rviz colors -->
+    <material name="Grey">
+        <color rgba="0.2 0.2 0.2 1."/>
+    </material>
+    <material name="Orange">
+        <color rgba="1.0 0.423529411765 0.0392156862745 0.5"/>
+    </material>
+    <material name="Blue">
+        <color rgba="0.5 0.7 1.0 0.5"/>
+    </material>
+    <material name="beam_color">
+        <color rgba="0.72 0.60 0.30 1.0"/>
+    </material>
+
+
+    <!-- Joint from Base to FT-Sensor Below -->
+    <joint name="joint_ft" type="fixed">
+        <parent link="base"/>
+        <child link="ft_sensor"/>
+        <origin rpy="0 0 0 " xyz="0.0 0.0 0.0"/>
+        <dynamics damping="0.5"/>
+    </joint>
+
+    <!-- Joint from FT-Sensor to Gripper-Beam Below -->
+    <joint name="joint_gripper" type="fixed">
+        <parent link="ft_sensor"/>
+        <child link="gripper_double_notch_beam"/>
+        <origin rpy="0 0 0 " xyz="0.0 0.0 0.0"/>
+        <dynamics damping="0.5"/>
+    </joint>
+
+    <!-- Joint from Gripper-Beam to Virtual Member Below -->
+    <joint name="joint_member" type="fixed">
+        <parent link="gripper_double_notch_beam"/>
+        <child link="member"/>
+        <!-- Offset 40 mm (beam half-depth) + 155 mm (beam offset from world origin)-->
+        <origin rpy="0 0 0 " xyz="0.0 0.0 -0.195"/>
+        <dynamics damping="0.5"/>
+    </joint>
+
+
+    <!-- Virtual Base Link -->
+    <link name="base">
+      <inertial>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <mass value="0.001"/>
+          <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+    </link>
+
+    <!-- Virtual Member Link to Computer Distance to Target -->
+    <link name="member">
+      <inertial>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <mass value="0.01"/>
+          <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+    </link>
+
+    <!-- FT-Sensor Link -->
+    <link name="ft_sensor">
+    <inertial>
+          <mass value="1.964"/>
+          <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <visual>
+        <material name="Blue"/>
+        <geometry>
+          <mesh filename="sensor/meshes/visual/ft_sensor.stl"/>
+        </geometry>
+    </visual>
+    <collision>
+        <geometry>
+          <mesh filename="sensor/meshes/collision/ft_sensor.stl"/>
+        </geometry>
+    </collision>
+    </link>
+
+    <!-- EF Link -->
+    <link name="gripper_double_notch_beam">
+        <inertial>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.09963736"/>
+            <mass value="8.56"/>
+            <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+        </inertial>
+        <visual>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/visual/gripper_double_notch_delta_beam.stl"/>
+            </geometry>
+            <material name="Grey"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_00.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_01.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_02.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_03.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_04.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_05.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_06.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_07.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_08.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_09.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_10.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_11.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_12.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_13.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_14.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_15.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_16.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_17.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_18.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_19.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_20.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/gripper_21.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/beam_13C_00.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/beam_13C_01.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/beam_13C_02.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/beam_13C_03.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="gripper_double_notch_delta_beam/meshes/collision/beam_13C_04.stl"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

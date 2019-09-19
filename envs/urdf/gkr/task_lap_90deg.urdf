@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<robot name="beam_2C_90deg_3mm">
+
+
+    <!-- Import Rviz colors -->
+    <material name="beam_color">
+        <color rgba="0.72 0.60 0.30 1.0"/>
+    </material>
+
+    <!-- Joint from Base to FT-Sensor Below -->
+    <joint name="joint_base" type="fixed">
+        <parent link="base"/>
+        <child link="beam_2C_90deg_3mm"/>
+        <origin rpy="0 0 0 " xyz="0.0 0.0 0.0"/>
+        <dynamics damping="0.5"/>
+    </joint>
+
+    <!-- Virtual Base Link -->
+    <link name="base">
+      <inertial>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <mass value="0.001"/>
+          <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+    </link>
+
+    <!-- Beam Link -->
+    <link name="beam_2C_90deg_3mm">
+        <inertial>
+            <origin rpy="0 0 0" xyz="-7.039904321215437e-17 2.2221920205856806e-20 -0.00028483352761386483"/>
+            <mass value="1.9549599948003116"/>
+            <inertia ixx="2.6080195612833765e-06" ixy="3.914636633752519e-39" ixz="-9.306456843444792e-22" iyy="0.0005179224270478861" iyz="-6.979084825602558e-24" izz="0.000516357052770553"/>
+        </inertial>
+        <visual>
+            <geometry>
+                <mesh filename="beam_2C_90deg_3mm/meshes/visual/beam_2C_90deg_3mm.stl"/>
+            </geometry>
+            <material name="beam_color"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="beam_2C_90deg_3mm/meshes/collision/beam_2C_90deg_3mm_0.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="beam_2C_90deg_3mm/meshes/collision/beam_2C_90deg_3mm_1.stl"/>
+            </geometry>
+        </collision>
+        <collision>
+            <geometry>
+                <mesh filename="beam_2C_90deg_3mm/meshes/collision/beam_2C_90deg_3mm_2.stl"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>
