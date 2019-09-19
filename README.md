@@ -1,6 +1,6 @@
 # RLRoboticAssembly
 
-_**NOTE:** This code is not yet public! Stay tuned for updates._
+_**NOTE:** This code is being refactored. See [reviewer branch](https://github.com/AutodeskRoboticsLab/RLRoboticAssembly/tree/reviewer)._
 
 ![pbtask](docs/images/header.png)
 
